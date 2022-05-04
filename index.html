@@ -223,7 +223,7 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/reynold.sgn/" target="_blank" class="text-white fw-bold">Reynold Andre</a></p>
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a style="text-decoration: none" href="https://www.instagram.com/reynold.sgn/" target="_blank" class="text-white fw-bold">Reynold Andre</a></p>
     </footer>
     <!-- Akhir Footer -->
 
@@ -238,36 +238,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/TextPlugin.min.js"></script>
     <script>
       gsap.registerPlugin(TextPlugin);
-      gsap.to(".lead", { duration: 2, delay: 1.5, text: "College Student" });
-      gsap.from(".jumbotron img", { duration: 1, rotateY: 180, opacity: 0 });
-      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0 });
+      gsap.to('.lead', { duration: 2, delay: 1.5, text: 'College Student' });
+      gsap.from('.jumbotron img', { duration: 1, rotateY: 180, opacity: 0 });
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0 });
     </script>
 
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbw8XkL0GzYh2WPIhVsBz-cFZfzfqonqbVl6zAUMoneANvfQ-q1GQIGOT_A9fzckht21vw/exec";
-      const form = document.forms["portfolio-contact-form"];
-      const btnKirim = document.querySelector(".btn-kirim");
-      const btnLoading = document.querySelector(".btn-loading");
-      const myAlert = document.querySelector(".my-alert");
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw8XkL0GzYh2WPIhVsBz-cFZfzfqonqbVl6zAUMoneANvfQ-q1GQIGOT_A9fzckht21vw/exec';
+      const form = document.forms['portfolio-contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
         // Ketika tombol sumbit diklik
         // tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle("d-none");
-        btnKirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then((response) => {
             // tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle("d-none");
-            btnKirim.classList.toggle("d-none");
-            console.log("Success!", response);
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            console.log('Success!', response);
             // tampilkan alert
-            myAlert.classList.toggle("d-none");
+            myAlert.classList.toggle('d-none');
             // reset form
             form.reset();
           })
-          .catch((error) => console.error("Error!", error.message));
+          .catch((error) => console.error('Error!', error.message));
       });
     </script>
   </body>
