@@ -4,6 +4,7 @@
 }
 .card {
   border: none;
+  opacity: 90%;
   background-color: #161b22;
   position: relative;
   overflow: hidden;
