@@ -60,20 +60,20 @@
   font-size: 19px;
 }
 
-.buttons button:nth-child(1) {
+.buttons a:nth-child(1) {
   border: 1px solid #ff3f81 !important;
   color: #ff3f81;
   height: 40px;
 }
 
-.buttons button:nth-child(1):hover {
+.buttons a:nth-child(1):hover {
   border: 1px solid #ff3f81 !important;
   color: #fff;
   height: 40px;
   background-color: #ff3f81;
 }
 
-.buttons button:nth-child(2) {
+.buttons a:nth-child(2) {
   border: 1px solid #ff3f81 !important;
   background-color: #ff3f81;
   color: #fff;
