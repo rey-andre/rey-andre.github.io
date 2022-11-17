@@ -1,0 +1,136 @@
+#vanta-canvas {
+  width: 100%;
+  height: 100vh;
+}
+.card {
+  border: none;
+  background-color: #161b22;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #e1bee7;
+  transform: scaleY(1);
+  transition: all 0.5s;
+  transform-origin: bottom;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ff3f81;
+  transform: scaleY(0);
+  transition: all 0.5s;
+  transform-origin: bottom;
+}
+
+.card:hover::after {
+  transform: scaleY(1);
+}
+
+.fonts {
+  font-size: 11px;
+}
+
+.social-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-list li {
+  padding: 10px;
+  color: #ff3f81;
+  font-size: 19px;
+}
+
+.buttons button:nth-child(1) {
+  border: 1px solid #ff3f81 !important;
+  color: #ff3f81;
+  height: 40px;
+}
+
+.buttons button:nth-child(1):hover {
+  border: 1px solid #ff3f81 !important;
+  color: #fff;
+  height: 40px;
+  background-color: #ff3f81;
+}
+
+.buttons button:nth-child(2) {
+  border: 1px solid #ff3f81 !important;
+  background-color: #ff3f81;
+  color: #fff;
+  height: 40px;
+}
+
+.icons {
+  display: flex;
+  column-gap: 25px;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ff3f81;
+  border-radius: 50%;
+  outline: 2px solid #ff3f81;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+.icon:hover {
+  outline-offset: 4px;
+  color: #fff;
+}
+.icon:hover i {
+  animation: shake 0.25px;
+}
+.icon--instagram:hover {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  outline-color: #a02d76;
+}
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+.icon--github:hover {
+  background-color: #161b22;
+  outline-color: #000;
+}
+@keyframes shake {
+  10% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}
