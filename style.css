@@ -139,3 +139,8 @@
     transform: rotate(-15deg);
   }
 }
+
+.swal2-popup {
+  background-color: #19153c;
+  border: 2px solid #a02d76;
+}
