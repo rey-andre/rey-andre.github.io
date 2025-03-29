@@ -15,6 +15,9 @@
   border-radius: 8px;
   cursor: pointer;
   color: #fff;
+  height: auto; /* Changed from fixed height to auto */
+  width: 100%;  /* Changed to 100% for responsiveness */
+  max-width: 900px;  /* Set a max width */
 }
 
 .card:before {
@@ -143,4 +146,30 @@
 .swal2-popup {
   background-color: #19153c;
   border: 2px solid #a02d76;
+}
+.modal-content.bg-dark {
+  background-color: #343a40; /* warna latar belakang gelap */
+  color: white; /* warna teks putih */
+}
+
+.modal-header {
+  border-bottom: 1px solid #444; /* warna border header */
+}
+
+.modal-footer {
+  border-top: 1px solid #444; /* warna border footer */
+}
+
+/* Menyesuaikan tombol close */
+.btn-close {
+  filter: invert(1); /* Membuat tombol close terlihat jelas di tema gelap */
+}
+textarea {
+  background-color: #000000 !important;  /* Background item */
+  color: #e8f263 !important;  /* Teks putih */
+  border: 1px solid #444 !important;  /* Bosrder gelap */
+  font-family: monospace !important;  /* Font monospace agar rapi */
+  font-size: 14px !important;  /* Ukuran font */
+  white-space: pre-wrap !important;  /* Membungkus teks jika terlalu panjang */
+  word-wrap: break-word !important;  /* Memotong kata yang terlalu panjang */
 }
