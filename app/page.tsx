@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NetworkCanvas from "@/components/ui/NetworkCanvas";
-import { getProfile } from "@/lib/queries/profile";
+import { getProfile } from "@/lib/queries/profile.server";
 
 export default async function Home() {
   const profile = await getProfile();

@@ -60,13 +60,13 @@ Dokumen ini berisi pembagian tugas langkah demi langkah untuk mengimplementasika
 ---
 
 ## TAHAP 5: Pembuatan CMS Admin Dashboard (AI Agent)
-- [ ] **Layout Admin:** 
+- [x] **Layout Admin:** 
   - Buat layout dengan sidebar navigasi (Dashboard, Profile, Education, Projects, Logout) bernuansa *dark theme* dengan aksen pink/purple[cite: 2].
-- [ ] **Modul Profile CMS (`/admin/profile`):** 
+- [x] **Modul Profile CMS (`/admin/profile`):** 
   - Buat form untuk mengubah data bio, *social media links*, dan fitur upload *single image* untuk foto profil ke Supabase Storage[cite: 2].
-- [ ] **Modul Education CMS (`/admin/education`):** 
+- [x] **Modul Education CMS (`/admin/education`):** 
   - Buat fitur CRUD (Create, Read, Update, Delete) untuk daftar riwayat pendidikan lengkap dengan *toggle visibility*[cite: 2].
-- [ ] **Modul Projects CMS (`/admin/projects`):** 
+- [x] **Modul Projects CMS (`/admin/projects`):** 
   - Buat list/tabel data proyek.
   - Buat halaman form create/edit proyek (`/admin/projects/create` & `/admin/projects/[id]`)[cite: 2].
   - Implementasi *multiple image upload* ke Supabase Storage, preview gambar, dan fungsionalitas hapus gambar untuk carousel proyek[cite: 2].

@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/client";
 
 export interface Profile {
   id?: string;
@@ -31,9 +31,9 @@ export const DEFAULT_PROFILE: Profile = {
   twitter_url: "https://twitter.com/rynld_ndr",
 };
 
-export async function getProfile(): Promise<Profile> {
+export async function getClientProfile(): Promise<Profile> {
   try {
-    const supabase = await createClient();
+    const supabase = createClient();
     const { data, error } = await supabase
       .from("profiles")
       .select("*")
@@ -51,5 +51,39 @@ export async function getProfile(): Promise<Profile> {
     };
   } catch {
     return DEFAULT_PROFILE;
+  }
+}
+
+export async function updateProfile(profile: Partial<Profile>): Promise<Profile> {
+  const supabase = createClient();
+
+  const { data: existing } = await supabase
+    .from("profiles")
+    .select("id")
+    .limit(1)
+    .maybeSingle();
+
+  if (existing?.id) {
+    const { data, error } = await supabase
+      .from("profiles")
+      .update({
+        ...profile,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", existing.id)
+      .select()
+      .single();
+
+    if (error) throw new Error(error.message);
+    return data;
+  } else {
+    const { data, error } = await supabase
+      .from("profiles")
+      .insert([profile])
+      .select()
+      .single();
+
+    if (error) throw new Error(error.message);
+    return data;
   }
 }
