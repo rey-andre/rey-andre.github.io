@@ -1,9 +1,9 @@
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 import { DEFAULT_PROFILE, type Profile } from "./profile";
 
 export async function getProfile(): Promise<Profile> {
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     const { data, error } = await supabase
       .from("profiles")
       .select("*")

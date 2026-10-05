@@ -74,10 +74,10 @@ Dokumen ini berisi pembagian tugas langkah demi langkah untuk mengimplementasika
 ---
 
 ## TAHAP 6: Pembuatan Halaman Portfolio Publik (AI Agent)
-- [ ] **Halaman Portfolio Utama (`/portfolio`):** 
+- [x] **Halaman Portfolio Utama (`/portfolio`):** 
   - Fetch data riwayat pendidikan dan daftar proyek yang berstatus *published* dari Supabase.
   - Tampilkan dalam bentuk UI Card atau List yang interaktif dan responsif[cite: 2].
-- [ ] **Halaman Detail Proyek (`/portfolio/[slug]`):** 
+- [x] **Halaman Detail Proyek (`/portfolio/[slug]`):** 
   - Render halaman detail proyek menggunakan SSR (Server-Side Rendering) untuk mendukung SEO[cite: 2].
   - Implementasi komponen **Image Carousel** (misalnya menggunakan *Swiper*) untuk menampilkan array gambar `project_images`[cite: 2].
   - Tampilkan deskripsi, tumpukan teknologi (sebagai tag), dan link repository/demo[cite: 2].
@@ -85,10 +85,10 @@ Dokumen ini berisi pembagian tugas langkah demi langkah untuk mengimplementasika
 ---
 
 ## TAHAP 7: Optimasi, Testing & Finalisasi (AI Agent & User)
-- [ ] **Optimasi SEO & Performa (AI Agent):** 
+- [x] **Optimasi SEO & Performa (AI Agent):** 
   - Tambahkan metadata dinamis di setiap halaman public (Title, Description, Open Graph)[cite: 2].
   - Terapkan `next/image` untuk optimasi *lazy loading* gambar[cite: 2].
-- [ ] **Testing Menyeluruh (AI Agent & User):** 
+- [x] **Testing Menyeluruh (AI Agent & User):** 
   - Verifikasi bahwa skema RLS berjalan dengan benar[cite: 2].
   - Cek responsivitas tampilan (Mobile, Tablet, Desktop)[cite: 2].
 - [ ] **Deployment (User):** 

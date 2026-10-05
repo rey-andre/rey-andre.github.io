@@ -1,9 +1,9 @@
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 import type { Project } from "./projects";
 
 export async function getProjectsList(onlyPublished: boolean = true): Promise<Project[]> {
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     let query = supabase
       .from("projects")
       .select("*, project_images(*)")
@@ -25,7 +25,7 @@ export async function getProjectsList(onlyPublished: boolean = true): Promise<Pr
 
 export async function getProjectBySlug(slug: string): Promise<Project | null> {
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     const { data, error } = await supabase
       .from("projects")
       .select("*, project_images(*)")
