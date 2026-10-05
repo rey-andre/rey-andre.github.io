@@ -39,22 +39,22 @@ Dokumen ini berisi pembagian tugas langkah demi langkah untuk mengimplementasika
 ---
 
 ## TAHAP 3: Database & Skema Supabase (AI Agent)
-- [ ] **Buat File Skema Migrasi / Setup SQL:** 
+- [x] **Buat File Skema Migrasi / Setup SQL:** 
   - Buat query SQL (di file `supabase/migrations/`) untuk membuat tabel: `profiles`, `education`, `projects`, dan `project_images` sesuai definisi kolom di PRD[cite: 2].
-- [ ] **Konfigurasi Row Level Security (RLS):** 
+- [x] **Konfigurasi Row Level Security (RLS):** 
   - Tulis SQL policy untuk memastikan data public bisa dibaca (`SELECT`), namun operasi `INSERT`, `UPDATE`, `DELETE` hanya bisa dilakukan oleh user *authenticated* (Admin)[cite: 2].
-- [ ] **Migrasi Data Awal (Seeding):** 
+- [x] **Migrasi Data Awal (Seeding):** 
   - Baca data project lama yang ada di file `index.js` existing[cite: 2].
   - Konversi data tersebut menjadi file `seed.sql` untuk dimasukkan ke database Supabase agar website tidak kosong saat pertama berjalan[cite: 2].
 
 ---
 
 ## TAHAP 4: Authentication & Route Protection (AI Agent)
-- [ ] **Integrasi Supabase Auth:** 
+- [x] **Integrasi Supabase Auth:** 
   - Setup Supabase Client untuk *client-side* dan *server-side* di dalam folder `lib/supabase/`[cite: 2].
-- [ ] **Buat Halaman Login:** 
+- [x] **Buat Halaman Login:** 
   - Bangun halaman login di `/admin/login` menggunakan Email & Password[cite: 2].
-- [ ] **Buat Route Protection (Middleware):** 
+- [x] **Buat Route Protection (Middleware):** 
   - Konfigurasi `middleware.ts` Next.js untuk mengecek sesi user. Jika *unauthenticated* mencoba mengakses `/admin`, *redirect* otomatis ke `/admin/login`[cite: 2].
 
 ---
